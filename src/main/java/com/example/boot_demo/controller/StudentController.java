@@ -24,6 +24,11 @@ public class StudentController {
         // 移除多余的getStudentById调用，直接返回新增学生的ID
         return Response.newSuccess(studentService.addNewStudent(studentDTO));
     }
+
+    @DeleteMapping("/student/{id}")
+    public void deleteStudentById(@PathVariable Long id) {
+       studentService.deleteStudentById(id);
+    }
 }
 
 

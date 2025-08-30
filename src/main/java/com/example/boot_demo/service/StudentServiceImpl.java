@@ -34,5 +34,13 @@ public Long addNewStudent(StudentDTO studentDTO) {
     Student student = studentRepository.save(StudentConverter.convertStudent(studentDTO));
     return student.getId();
 }
+
+    @Override
+    public void deleteStudentById(Long id) {
+        studentRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("id"+id+"does not exist!"));
+        studentRepository.deleteById(id);
+    }
+
+
 }
 
