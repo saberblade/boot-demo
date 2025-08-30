@@ -9,4 +9,6 @@ public interface StudentService {
     Long addNewStudent(StudentDTO studentDTO);
 
     void deleteStudentById(Long id);
+
+    Object updateStudentById(Long id, String name, int age, String email);
 }
