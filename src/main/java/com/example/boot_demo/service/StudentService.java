@@ -1,8 +1,10 @@
 package com.example.boot_demo.service;
 
-import com.example.boot_demo.dao.Student;
+import com.example.boot_demo.dto.StudentDTO;
 
 public interface StudentService {
 
-    Student getStudentById(Long id);
+    StudentDTO getStudentById(Long id);
+
+    Long addNewStudent(StudentDTO studentDTO);
 }
